@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  VesticoKit
 //
-//  Created by 557660 on 08/01/2022.
+//  Created by Vestico Ltd. on 08/01/2022.
 //  Copyright (c) 2022 557660. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 class ProductsViewController: UITableViewController {
 	
-	let products = ["6257233395879", "6733924991143", "6196672004263", "7219512443047", "6733924991143", "6255934996647"]
+	let products = ["6257233395879", "6733924991143", "6196672004263", "7219512443047", "6255934996647"]
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)

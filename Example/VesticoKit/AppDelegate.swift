@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  VesticoKit
 //
-//  Created by 557660 on 08/01/2022.
+//  Created by Vestico Ltd. on 08/01/2022.
 //  Copyright (c) 2022 557660. All rights reserved.
 //
 
@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
 		// Initialize VesticoKit
-		VesticoKit.prepare(with: "https://widget.vestico.co", with: "<#client-id#>")
+		VesticoKit.prepare(with: "https://vestico-dev-widget-sdk.firebaseapp.com/widget.js", with: "vestico-demo-dev-myshopify-com")
+		// VesticoKit.prepare(with: "https://widget.vestico.co", with: "<#client-id#>")
 		
         return true
     }

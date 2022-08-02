@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  VesticoKit
 //
-//  Created by 557660 on 08/01/2022.
+//  Created by Vestico Ltd. on 08/01/2022.
 //  Copyright (c) 2022 557660. All rights reserved.
 //
 
@@ -29,7 +29,7 @@ class ProductViewController: UIViewController {
 		super.viewWillAppear(animated)
 		
 		// Hide before setting the product. The delegate callbacks might come back instantenously
-		self.carouselContainer.isHidden = !VesticoKit.canDisplayFitMatchButton
+		self.carouselContainer.isHidden = true
 		self.fitMatchButton.isHidden = !VesticoKit.canDisplayFitMatchButton
 		self.fitMatchNotAvailableLabel.isHidden = true
 		

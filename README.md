@@ -30,9 +30,9 @@ The sample app shows how VesticoKit can be used within an eCommerce app.
 ### Initializing VesticoKit
 The first call to VesticoKit is to initialize the SDK with the shop credentials: 
 ```
-VesticoKit.prepare(with: "https://widget.vestico.co", with: "<#vestico-shop-id#>")
+register(withEnvironmentURL environmentURL: "https://widget.vestico.co", clientID: <#vestico-shop-id#>)
 ```
-- `<#vestico-shop-id#>` is your unique shop id. In case you can't find the shop id, reach out to [Vestico support](help@vestico.co) to retrieve the shop id.
+- `<#vestico-shop-id#>` is your unique client id. In case you can't find the shop id, reach out to [Vestico support](help@vestico.co) to retrieve the client id.
 
 ### Receiving Widget Events
 
@@ -53,7 +53,7 @@ public protocol VesticoSessionDelegate {
 ### Loading Products
 Load products by passing the product id and widget type.
 ```
-VesticoKit.configure(for: "<#product-id#>", presenting: <#vestico-widget-type#>)
+VesticoKit.configure(forProductID: "<#product-id#>", presenting: <#vestico-widget-type#>)
 ```
 - `<#product-id#>` is the uid of the product in your shop
 - `<#vestico-widget-type#>` is the type of widget you want to load. On PDPs this is usually `.carousel` for the Vestico carousel
