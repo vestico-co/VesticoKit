@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VesticoKit'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'A framework to integrate Vestico into iOS apps.'
 
 # This description is used to generate tags and improve search results.
@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
   A framework to integrate Vestico into fashion & beauty iOS apps.
                        DESC
 
-  s.homepage         = 'https://github.com/vestico-co/VesticoKit-builds'
+  s.homepage         = 'https://github.com/vestico-co/VesticoKit'
   s.license          = { :type => 'LGPV', :file => 'LICENSE' }
   s.author           = { 'Vestico Ltd.' => 'info@vestico.co' }
-  s.source           = { :http => 'https://github.com/vestico-co/VesticoKit-builds/raw/main/VesticoKit.zip' }
+  s.source           = { :http => 'https://github.com/vestico-co/VesticoKit/raw/main/VesticoKit.zip' }
   s.social_media_url = 'https://www.instagram.com/vestico__/'
   
   s.platform                = :ios
