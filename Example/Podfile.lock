@@ -16,14 +16,14 @@ PODS:
     - iOSSnapshotTestCase (~> 8.0)
     - Nimble
   - Quick (2.2.1)
-  - VesticoKit (0.1.7)
+  - VesticoKit (0.1.8)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
   - Nimble (~> 10.0.0)
   - Nimble-Snapshots (~> 9.4.0)
   - Quick (~> 2.2.0)
-  - VesticoKit (>= 0.1.7)
+  - VesticoKit (~> 0.1.7)
 
 SPEC REPOS:
   trunk:
@@ -40,8 +40,8 @@ SPEC CHECKSUMS:
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  VesticoKit: 470c22adcb51a5be94cb74af9255de9b644a7e6b
+  VesticoKit: 95852d6be352b42bd5949a09c41d49c2d51380e6
 
-PODFILE CHECKSUM: a266eb15edda566b26f57c623a5f02bb829a0636
+PODFILE CHECKSUM: dd8c2763e9ee767624803b9db049a94fda50f9eb
 
 COCOAPODS: 1.11.3

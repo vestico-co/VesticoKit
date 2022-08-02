@@ -38,7 +38,7 @@ class ProductViewController: UIViewController {
             return
         }
         self.title = productUID
-        VesticoKit.configure(for: productUID, presenting: .carousel)
+        VesticoKit.configure(forProductID: productUID, presenting: .carousel)
     }
     
     @IBAction func fitMatch(_ sender: Any) {

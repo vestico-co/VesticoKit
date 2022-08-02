@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Initialize VesticoKit
-        VesticoKit.prepare(with: "https://vestico-dev-widget-sdk.firebaseapp.com/widget.js", with: "vestico-demo-dev-myshopify-com")
-        // VesticoKit.prepare(with: "https://widget.vestico.co", with: "<#client-id#>")
+        VesticoKit.register(withEnvironmentURLPath: "https://vestico-dev-widget-sdk.firebaseapp.com", clientID: "vestico-demo-dev-myshopify-com")
+        // VesticoKit.register(withEnvironmentURLPath: "https://widget.vestico.co", clientID: <#client-id#>)
         
         return true
     }

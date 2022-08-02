@@ -44,8 +44,8 @@ In your ViewController, you set the VesticoKit delegate to the View Controller t
 
 ```
 public protocol VesticoSessionDelegate {
-	func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool)
-	func didLoadProduct(_ product: String)
+	func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool) {
+	func didLoadProduct(withUID productUID: String) {
 }
 ```
 
