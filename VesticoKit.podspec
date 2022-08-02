@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VesticoKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of VesticoKit.'
+  s.version          = '0.1.7'
+  s.summary          = 'A framework to integrate Vestico into iOS apps.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  A framework to integrate Vestico into fashion & beauty iOS apps.
                        DESC
 
-  s.homepage         = 'https://github.com/557660/VesticoKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '557660' => 'benedikt@vestico.co' }
-  s.source           = { :git => 'https://github.com/557660/VesticoKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'VesticoKit/Classes/**/*'
+  s.homepage         = 'https://github.com/vestico-co/VesticoKit-builds'
+  s.license          = { :type => 'LGPV', :file => 'LICENSE' }
+  s.author           = { 'Vestico Ltd.' => 'info@vestico.co' }
+  s.source           = { :http => 'https://github.com/vestico-co/VesticoKit-builds/raw/main/VesticoKit.zip' }
+  s.social_media_url = 'https://www.instagram.com/vestico__/'
   
-  # s.resource_bundles = {
-  #   'VesticoKit' => ['VesticoKit/Assets/*.png']
-  # }
+  s.platform                = :ios
+  s.ios.deployment_target = '13.0'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.vendored_frameworks = 'VesticoKit.xcframework'
+  
 end
