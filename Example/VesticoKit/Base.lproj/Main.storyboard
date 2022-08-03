@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tVa-DX-viy">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +11,7 @@
         <!--Product View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="ProductViewController" id="vXZ-lx-hvc" customClass="ProductViewController" customModule="VesticoKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductViewController" id="vXZ-lx-hvc" customClass="ProductViewController" customModule="VesticoKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -139,7 +138,7 @@
         <!--Products View Controller-->
         <scene sceneID="JBk-LO-bam">
             <objects>
-                <tableViewController id="Aw3-5t-YbC" customClass="ProductsViewController" customModule="VesticoKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Aw3-5t-YbC" customClass="ProductsViewController" customModule="VesticoKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eN2-a1-o1r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,6 +212,36 @@
             </objects>
             <point key="canvasLocation" x="-1455" y="904"/>
         </scene>
+        <!--Conversion-->
+        <scene sceneID="TYX-Sy-Pup">
+            <objects>
+                <viewController id="CCa-yw-Tgz" customClass="ConversionViewController" customModule="VesticoKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dy5-Vu-IQn"/>
+                        <viewControllerLayoutGuide type="bottom" id="kRl-lP-du2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LwP-tl-UtU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPQ-lC-4nK">
+                                <rect key="frame" x="114" y="318" width="147" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Record Conversion"/>
+                                <connections>
+                                    <action selector="recordConversion:" destination="CCa-yw-Tgz" eventType="touchUpInside" id="xBg-0Z-uX1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Conversion" image="dollarsign.circle" catalog="system" selectedImage="dollarsign.circle.fill" id="3dN-xf-JrL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20r-p0-Qg3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1458" y="1573"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Sf7-NF-4Xx">
             <objects>
@@ -225,6 +254,7 @@
                     <connections>
                         <segue destination="ECh-iJ-m1J" kind="relationship" relationship="viewControllers" id="tFe-Xj-k6N"/>
                         <segue destination="Kft-3N-ZbO" kind="relationship" relationship="viewControllers" id="P2B-D1-cX9"/>
+                        <segue destination="CCa-yw-Tgz" kind="relationship" relationship="viewControllers" id="Idh-Bx-RwZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUj-Ms-Z7k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,6 +300,8 @@
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="secondaryLabelColor">

@@ -12,6 +12,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		8D5DE0D2289B286300377B1F /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DE0D1289B286300377B1F /* ConversionViewController.swift */; };
 		8DB6D0732899C16400B26779 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6D0722899C16400B26779 /* ProductViewController.swift */; };
 		8DB6D079289A7E4E00B26779 /* VesticoSDKInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DB6D078289A7E4E00B26779 /* VesticoSDKInfo.plist */; };
 		A1FADDE70562F9D329A28593 /* Pods_VesticoKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E9E200DF775C0C0B0F2CDC /* Pods_VesticoKitExample.framework */; };
@@ -33,6 +34,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		71190AE0BA10AA2FDF9EA115 /* Pods-VesticoKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VesticoKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-VesticoKit_Example/Pods-VesticoKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8D3AB362654E0B7478C51FB2 /* Pods-VesticoKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VesticoKit_Example.release.xcconfig"; path = "Target Support Files/Pods-VesticoKit_Example/Pods-VesticoKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8D5DE0D1289B286300377B1F /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		8DB6D0722899C16400B26779 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		8DB6D078289A7E4E00B26779 /* VesticoSDKInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = VesticoSDKInfo.plist; sourceTree = "<group>"; };
 		FF1C25D6FE59856F2A0EEF84 /* Pods-VesticoKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VesticoKitExample.debug.xcconfig"; path = "Target Support Files/Pods-VesticoKitExample/Pods-VesticoKitExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ProductsViewController.swift */,
 				8DB6D0722899C16400B26779 /* ProductViewController.swift */,
+				8D5DE0D1289B286300377B1F /* ConversionViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5DE0D2289B286300377B1F /* ConversionViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ProductsViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				8DB6D0732899C16400B26779 /* ProductViewController.swift in Sources */,
