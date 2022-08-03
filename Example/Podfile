@@ -3,5 +3,5 @@ use_frameworks!
 platform :ios, '13.0'
 
 target 'VesticoKitExample' do
-	pod 'VesticoKit', '~> 0.1.7'
+	pod 'VesticoKit', '~> 1.0.0'
 end

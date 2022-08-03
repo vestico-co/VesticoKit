@@ -38,27 +38,27 @@ class ProductViewController: UIViewController {
             return
         }
         self.title = productUID
-        VesticoKit.configure(forProductID: productUID, presenting: .carousel)
+        VesticoKit.configure(forProductUID: productUID, presenting: .carousel)
     }
     
-    @IBAction func fitMatch(_ sender: Any) {
+    @IBAction func showFitMatch(_ sender: Any) {
         let vc = VesticoKit.getFitMatchViewController()
         self.present(vc, animated: true)
     }
 }
 
-extension ProductViewController: VesticoSessionDelegate {
+extension ProductViewController: VesticoKitDelegate {
     
-    func didLoadProduct(_ product: String) {
-        print("product loaded \(product)")
+    func didLoadProduct(withUID productUID: String) {
+        print("product loaded \(productUID)")
         print("show content carousel")
         self.carouselContainer.isHidden = false
         self.fitMatchButton.isHidden = !VesticoKit.canDisplayFitMatchButton
         self.fitMatchNotAvailableLabel.isHidden = VesticoKit.canDisplayFitMatchButton
     }
     
-    func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool) {
-        print("show fit match button, product \(product): \(enabled)")
+    func didReceiveFitMatchUpdate(forProductUID productUID: String, enabled: Bool) {
+        print("show fit match button, product \(productUID): \(enabled)")
         fitMatchButton.isHidden = !enabled
         self.fitMatchNotAvailableLabel.isHidden = enabled
     }

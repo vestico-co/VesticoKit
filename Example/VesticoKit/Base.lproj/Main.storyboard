@@ -29,7 +29,7 @@
                                         <state key="normal" title="What's My Fit?"/>
                                         <buttonConfiguration key="configuration" style="filled" title="What's My Fit?"/>
                                         <connections>
-                                            <action selector="fitMatch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mu6-le-WeY"/>
+                                            <action selector="showFitMatch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5NP-ub-eT9"/>
                                         </connections>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-IK-uXF">
