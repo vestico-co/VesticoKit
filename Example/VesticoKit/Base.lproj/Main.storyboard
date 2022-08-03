@@ -224,9 +224,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPQ-lC-4nK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPQ-lC-4nK">
                                 <rect key="frame" x="114" y="318" width="147" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Record Conversion"/>
                                 <connections>
@@ -235,6 +234,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UPQ-lC-4nK" firstAttribute="centerX" secondItem="LwP-tl-UtU" secondAttribute="centerX" id="Srp-ed-pit"/>
+                            <constraint firstItem="UPQ-lC-4nK" firstAttribute="centerY" secondItem="LwP-tl-UtU" secondAttribute="centerY" id="Tym-dv-RKi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Conversion" image="dollarsign.circle" catalog="system" selectedImage="dollarsign.circle.fill" id="3dN-xf-JrL"/>
                 </viewController>
