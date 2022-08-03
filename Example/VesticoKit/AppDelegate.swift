@@ -3,7 +3,7 @@
 //  VesticoKit
 //
 //  Created by Vestico Ltd. on 08/01/2022.
-//  Copyright (c) 2022 557660. All rights reserved.
+//  Copyright (c) 2022 Vestico Ltd.. All rights reserved.
 //
 
 import UIKit
