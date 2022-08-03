@@ -29,7 +29,7 @@ The sample app shows how VesticoKit can be used within an eCommerce app.
 
 ### Initializing VesticoKit
 The first call to VesticoKit is to initialize the SDK with the shop credentials: 
-```
+```Swift
 guard let vesticoInfoURL = Bundle.main.url(forResource: "VesticoSDKInfo", withExtension: "plist") else {
     print("Cannot find Vestico SDK Info")
     return false
@@ -50,13 +50,13 @@ Vestico offers demo environments allowing you to try out the SDK.
 
 ### Receiving Widget Events
 
-```
+```Swift
 VesticoKit.delegate = self
 ```
 
 In your ViewController, you set the VesticoKit delegate to the View Controller to receive `VesticoSessionDelegate` events from VesticoKit
 
-```
+```Swift
 public protocol VesticoSessionDelegate {
 	func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool) {
 	func didLoadProduct(withUID productUID: String) {
@@ -66,7 +66,7 @@ public protocol VesticoSessionDelegate {
 
 ### Loading Products
 Load products by passing the product id and widget type.
-```
+```Swift
 VesticoKit.configure(forProductID: "<#productID#>", presenting: <#vesticoWidgetType#>)
 ```
 - `<#productID#>` is the uid of the product in your shop
@@ -75,7 +75,7 @@ VesticoKit.configure(forProductID: "<#productID#>", presenting: <#vesticoWidgetT
 
 ### Recording conversion events
 Record conversion events to understand your customers
-```
+```Swift
 VesticoKit.recordConversion(forOrderID <#orderID#>, items: <#items#>)
 ```
 - `<#orderID#>` is the order UID as String
