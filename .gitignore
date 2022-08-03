@@ -34,3 +34,6 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
+
+# Ignore Vestico SDK Info.plist
+VesticoSDKInfo.plist

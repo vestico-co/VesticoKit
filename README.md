@@ -30,9 +30,23 @@ The sample app shows how VesticoKit can be used within an eCommerce app.
 ### Initializing VesticoKit
 The first call to VesticoKit is to initialize the SDK with the shop credentials: 
 ```
-VesticoKit.prepare(with: "https://widget.vestico.co", with: "<#vestico-shop-id#>")
+guard let vesticoInfoURL = Bundle.main.url(forResource: "VesticoSDKInfo", withExtension: "plist") else {
+    print("Cannot find Vestico SDK Info")
+    return false
+}
+VesticoKit.register(withConfigFileURL: vesticoInfoURL)
 ```
-- `<#vestico-shop-id#>` is your unique shop id. In case you can't find the shop id, reach out to [Vestico support](help@vestico.co) to retrieve the shop id.
+
+**`VesticoSDKInfo.plist`** requires the following fields: 
+- `environmentURLPath`: URL to the Vestico environment
+- `clientID`: A unique client id provided to you by Vestico
+- `apiKey`: A API key provided to you by Vestico 
+ 
+ Send a request to the [Vestico Integration Support team](mailto:integration@vestico.co) including the app bundle identifiers you wish to enable to retrieve your account details.
+ 
+ **NOTE**
+Vestico offers demo environments allowing you to try out the SDK.
+
 
 ### Receiving Widget Events
 
@@ -44,8 +58,8 @@ In your ViewController, you set the VesticoKit delegate to the View Controller t
 
 ```
 public protocol VesticoSessionDelegate {
-	func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool)
-	func didLoadProduct(_ product: String)
+	func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool) {
+	func didLoadProduct(withUID productUID: String) {
 }
 ```
 
@@ -53,11 +67,19 @@ public protocol VesticoSessionDelegate {
 ### Loading Products
 Load products by passing the product id and widget type.
 ```
-VesticoKit.configure(for: "<#product-id#>", presenting: <#vestico-widget-type#>)
+VesticoKit.configure(forProductID: "<#productID#>", presenting: <#vesticoWidgetType#>)
 ```
-- `<#product-id#>` is the uid of the product in your shop
-- `<#vestico-widget-type#>` is the type of widget you want to load. On PDPs this is usually `.carousel` for the Vestico carousel
+- `<#productID#>` is the uid of the product in your shop
+- `<#vesticoWidgetType#>` is the type of widget you want to load. On PDPs this is usually `.carousel` for the Vestico carousel
 
+
+### Recording conversion events
+Record conversion events to understand your customers
+```
+VesticoKit.recordConversion(forOrderID <#orderID#>, items: <#items#>)
+```
+- `<#orderID#>` is the order UID as String
+- `<#items#>` is an array of `OrderItem` objects 
 
 ## Author
 
