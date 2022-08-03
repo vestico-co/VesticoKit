@@ -54,11 +54,11 @@ Vestico offers demo environments allowing you to try out the SDK.
 VesticoKit.delegate = self
 ```
 
-In your ViewController, you set the VesticoKit delegate to the View Controller to receive `VesticoSessionDelegate` events from VesticoKit
+In your ViewController, you set the `VesticoKit.delegate` to the View Controller to receive events from `VesticoKitDelegate`
 
 ```Swift
-public protocol VesticoSessionDelegate {
-    func didReceiveFitMatchUpdate(forProduct product: String, enabled: Bool)
+public protocol VesticoKitDelegate {
+    func didReceiveFitMatchUpdate(forProductUID productUID: String, enabled: Bool)
     func didLoadProduct(withUID productUID: String)
 }
 ```
@@ -67,18 +67,18 @@ public protocol VesticoSessionDelegate {
 ### Loading Products
 Load products by passing the product id and widget type.
 ```Swift
-VesticoKit.configure(forProductID: "<#productID#>", presenting: <#vesticoWidgetType#>)
+VesticoKit.configure(forProductUID: "<#productUID#>", presenting: <#vesticoWidgetType#>)
 ```
-- `<#productID#>` is the uid of the product in your shop
+- `<#productUID#>` is the uid of the product in your shop
 - `<#vesticoWidgetType#>` is the type of widget you want to load. On PDPs this is usually `.carousel` for the Vestico carousel
 
 
 ### Recording conversion events
 Record conversion events to understand your customers
 ```Swift
-VesticoKit.recordConversion(forOrderID <#orderID#>, items: <#items#>)
+VesticoKit.recordConversion(forOrderUID <#orderUID#>, items: <#items#>)
 ```
-- `<#orderID#>` is the order UID as String
+- `<#orderUID#>` is the order UID as String
 - `<#items#>` is an array of `OrderItem` objects 
 
 ## Author
