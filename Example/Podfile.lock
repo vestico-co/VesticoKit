@@ -1,16 +1,16 @@
 PODS:
-  - VesticoKit (1.0.3)
+  - VesticoKit (1.1.0)
 
 DEPENDENCIES:
-  - VesticoKit (~> 1.0.0)
+  - VesticoKit (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - VesticoKit
 
 SPEC CHECKSUMS:
-  VesticoKit: 2f4829851c909a7ff66163ee0bc9b637366c8ce9
+  VesticoKit: 9a2a1dba8a3da83d505b01e5b2bd4e287d98787e
 
-PODFILE CHECKSUM: b14105d0b58a086c58b06485b020b1b11b686aee
+PODFILE CHECKSUM: 7d4ccc6e73a0b28d146f77a087a162aa440461da
 
 COCOAPODS: 1.11.3

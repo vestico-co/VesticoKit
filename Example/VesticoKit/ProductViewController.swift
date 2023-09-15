@@ -30,7 +30,7 @@ class ProductViewController: UIViewController {
         
         // Hide before setting the product. The delegate callbacks might come back instantenously
         self.carouselContainer.isHidden = true
-        self.fitMatchButton.isHidden = !VesticoKit.canDisplayFitMatchButton
+        self.fitMatchButton.isHidden = !VesticoKit.canDisplayButton
         self.fitMatchNotAvailableLabel.isHidden = true
         
         VesticoKit.delegate = self
@@ -53,13 +53,15 @@ extension ProductViewController: VesticoKitDelegate {
         print("product loaded \(productUID)")
         print("show content carousel")
         self.carouselContainer.isHidden = false
-        self.fitMatchButton.isHidden = !VesticoKit.canDisplayFitMatchButton
-        self.fitMatchNotAvailableLabel.isHidden = VesticoKit.canDisplayFitMatchButton
+        self.fitMatchButton.isHidden = !VesticoKit.canDisplayButton
+        self.fitMatchNotAvailableLabel.isHidden = VesticoKit.canDisplayButton
     }
     
-    func didReceiveFitMatchUpdate(forProductUID productUID: String, enabled: Bool) {
-        print("show fit match button, product \(productUID): \(enabled)")
-        fitMatchButton.isHidden = !enabled
-        self.fitMatchNotAvailableLabel.isHidden = enabled
+    func didReceiveButtonUpdate(forProductUID product: String, contentMatchEnabled: Bool, sizeRecommendationEnabled: Bool) {
+        print("show match button, product \(product): content: \(contentMatchEnabled), size rec: \(sizeRecommendationEnabled)")
+        let showButton = (contentMatchEnabled || sizeRecommendationEnabled)
+        self.fitMatchButton.isHidden = !showButton
+        self.fitMatchNotAvailableLabel.isHidden = showButton
     }
+    
 }
