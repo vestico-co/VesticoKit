@@ -1,5 +1,5 @@
 PODS:
-  - VesticoKit (1.1.0)
+  - VesticoKit (1.1.1)
 
 DEPENDENCIES:
   - VesticoKit (~> 1.0)
@@ -9,7 +9,7 @@ SPEC REPOS:
     - VesticoKit
 
 SPEC CHECKSUMS:
-  VesticoKit: 9a2a1dba8a3da83d505b01e5b2bd4e287d98787e
+  VesticoKit: b80d29694a077af3da44236869a57b04a9d00fd3
 
 PODFILE CHECKSUM: 7d4ccc6e73a0b28d146f77a087a162aa440461da
 
