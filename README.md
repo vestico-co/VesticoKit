@@ -58,7 +58,7 @@ In your ViewController, you set the `VesticoKit.delegate` to the View Controller
 
 ```Swift
 public protocol VesticoKitDelegate {
-    func didReceiveFitMatchUpdate(forProductUID productUID: String, enabled: Bool)
+    func didReceiveButtonUpdate(forProductUID productUID: String, contentMatchEnabled: Bool, sizeRecommendationEnabled: Bool)
     func didLoadProduct(withUID productUID: String)
 }
 ```
